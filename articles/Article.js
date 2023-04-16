@@ -22,6 +22,4 @@ Category.hasMany(Article);  // UMA categoria pertence a muitos artigos
 Article.belongsTo(Category); // UM Artigo pertence a uma categoria
 
 
-Article.sync({force: true});
-
 module.exports = Article;
