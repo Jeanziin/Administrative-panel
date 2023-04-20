@@ -1,7 +1,39 @@
 <%- include('partials/header.ejs'); -%>
-
+<%- include('partials/homenavbar.ejs'); -%>
 <body>
-    <h1>Olá Mundo!</h1>
+    <div class="container">
+        <hr>
+        <div class="jumbotron">
+            <h1 class="display-4">Bem-Vindo</h1>
+            <p class="lead">Lorem ipsum dolor sit amet. Non maiores rerum qui consequuntur voluptas 33 illo velit. Sed quos rerum in aspernatur tenetur vel maxime velit et recusandae totam ad sunt eveniet sed tenetur minus.</p>
+            <hr class="my-4">
+            <p>Lorem ipsum dolor sit amet. Non maiores rerum qui consequuntur voluptas 33 illo velit.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+          </div>
+        <hr>
+        <% articles.forEach(article => { %>
+            <div class="card">
+                <div class="card-header">
+                    <h2><%= article.title %></h2>
+                </div>
+                <div class="card-body">
+                    <a href="/<%= article.slug %>" class="btn btn-success">Ler artigo</a>
+                </div>
+            </div>
+            <br>
+        <% }) %>
+        <br>
+
+        <div class="row">
+            <div class="col col-12">
+                <a style="float:right" href="/articles/page/2">Next >>></a>
+            </div>
+            <hr>
+        </div>
+        <hr>
+    </div>
+
+    </div>
 
 </body>
 
